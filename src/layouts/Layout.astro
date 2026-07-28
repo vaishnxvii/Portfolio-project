@@ -2,33 +2,33 @@
 import '../styles/global.css';
 
 interface Props {
-	title: string;
+	title?: string;
 }
 
-const { title = "Portfolio" } = Astro.props;
+const { title = "Vaishnavi Gupta // Terminal" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<!-- Retro Monospace Font -->
+		
+		<!-- Developer Monospace Typography -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#0c0c0e] text-[#e4e4e7] font-mono selection:bg-cyan-500 selection:text-black antialiased">
-		<main class="min-h-screen max-w-5xl mx-auto p-6 md:p-12 flex flex-col justify-between">
+	<body class="bg-[#09090b] text-[#e4e4e7] font-mono selection:bg-cyan-500 selection:text-black antialiased relative min-h-screen">
+		
+		<!-- Scanline & Grid Effect Overlay -->
+		<div class="fixed inset-0 bg-scanlines pointer-events-none z-50 opacity-40"></div>
+		<div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-60"></div>
+
+		<div class="relative z-10 max-w-6xl mx-auto px-4 py-8 md:py-12">
 			<slot />
-		</main>
+		</div>
 	</body>
 </html>
-
-<style is:global>
-	body {
-		font-family: 'JetBrains Mono', monospace;
-	}
-</style>

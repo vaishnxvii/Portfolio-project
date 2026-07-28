@@ -1,11 +1,147 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Content structure mirroring tikitatech layout
+const navigationSections = [
+  {
+    title: "PROJECTS",
+    items: [
+      { name: "After Life: Reborn of Love", desc: "Published novel (2022)", tag: "NOVEL", url: "#" },
+      { name: "Indigenous Epistemologies", desc: "Academic research on Chinua Achebe", tag: "THESIS", url: "#" },
+      { name: "Drama Analysis Matrix", desc: "Theoretical drama research", tag: "RESEARCH", url: "#" }
+    ]
+  },
+  {
+    title: "RESOURCES & LOGS",
+    items: [
+      { name: "Python Utilities", desc: "System scripts & automation tools", tag: "PYTHON", url: "#" },
+      { name: "UI/UX Verification Suite", desc: "Dashboard testing & audit framework", tag: "UX AUDIT", url: "#" },
+      { name: "Niaz Ahmed Debate", desc: "1st Place - AI Ethics & Society", tag: "AWARD", url: "#" }
+    ]
+  },
+  {
+    title: "TOOLS & EXPERIMENTS",
+    items: [
+      { name: "XX RASE Conference", desc: "Literary event coordination system", tag: "EVENT", url: "#" },
+      { name: "Poona Drama Quiz", desc: "87% Score specialized analysis", tag: "CERT", url: "#" },
+      { name: "Build Log", desc: "Dev & writing process notes", tag: "LOGS", url: "#" }
+    ]
+  }
+];
+
+const socialLinks = [
+  { label: "GITHUB", url: "https://github.com/vaishnxvii" },
+  { label: "LINKEDIN", url: "#" },
+  { label: "X / TWITTER", url: "#" },
+  { label: "EMAIL", url: "mailto:contact@example.com" }
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="VAISHNAVI GUPTA // SYSTEM PORTFOLIO">
+  
+  <!-- TOP NAVIGATION HEADER -->
+  <header class="border border-zinc-800 bg-[#121215]/90 backdrop-blur-sm p-5 mb-8 shadow-2xl relative overflow-hidden group">
+    <!-- Top accent border glow -->
+    <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div>
+        <div class="flex items-center space-x-3">
+          <!-- Pulsing Live Indicator -->
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+          </span>
+          <h1 class="text-xl font-bold tracking-wider text-white text-glow-cyan">VAISHNAVI GUPTA</h1>
+        </div>
+        <p class="text-xs text-zinc-400 mt-1 font-mono tracking-tight">
+          M.A. LITERATURE <span class="text-zinc-600">|</span> PYTHON DEVELOPER <span class="text-zinc-600">|</span> AUTHOR
+        </p>
+      </div>
+
+      <div class="text-xs text-zinc-500 space-y-1 font-mono">
+        <p class="flex items-center gap-2">
+          <span class="text-zinc-600">STATUS:</span> 
+          <span class="text-emerald-400 font-semibold text-glow-green">ONLINE</span>
+        </p>
+        <p><span class="text-zinc-600">LOC:</span> LUCKNOW, IN</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN TERMINAL GRID SYSTEM -->
+  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    {navigationSections.map((section) => (
+      <div class="border border-zinc-800 bg-[#121215]/80 p-5 relative flex flex-col justify-between hover:border-cyan-500/80 transition-all duration-300 group shadow-lg">
+        
+        <div>
+          <!-- Section Indicator Bullet Header -->
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-zinc-800/80">
+            <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300">
+              <span class="text-cyan-400 animate-pulse">●</span>
+              <h2>{section.title}</h2>
+            </div>
+            <span class="text-[10px] text-zinc-600 font-mono">SYS.DIR</span>
+          </div>
+          
+          <!-- Content List -->
+          <ul class="space-y-4">
+            {section.items.map((item) => (
+              <li class="group/item border-b border-zinc-800/40 pb-3 last:border-none">
+                <a href={item.url} class="block">
+                  <div class="flex items-center justify-between text-xs font-semibold text-zinc-200 group-hover/item:text-cyan-400 transition-colors">
+                    <span class="flex items-center gap-1.5">
+                      <span class="text-zinc-600 group-hover/item:text-cyan-400 transition-colors">-</span>
+                      {item.name}
+                    </span>
+                    <span class="text-[9px] bg-zinc-900 border border-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded group-hover/item:border-cyan-500/50 transition-colors">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <p class="text-[11px] text-zinc-500 mt-1 pl-3 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    ))}
+  </main>
+
+  <!-- CONNECT & SOCIALS SECTION -->
+  <section class="border border-zinc-800 bg-[#121215]/80 p-5 mb-12">
+    <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4 pb-2 border-b border-zinc-800">
+      <span class="text-cyan-400">●</span>
+      <h2>CONNECT // NETWORKS</h2>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      {socialLinks.map((social) => (
+        <a 
+          href={social.url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="border border-zinc-800 bg-zinc-900/50 p-2.5 text-center text-xs text-zinc-400 hover:text-white hover:border-cyan-500 hover:bg-cyan-950/20 transition-all duration-200 flex items-center justify-center gap-2 group"
+        >
+          <span class="text-zinc-600 group-hover:text-cyan-400">&gt;</span>
+          <span>{social.label}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- SYSTEM FOOTER -->
+  <footer class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-zinc-500 gap-4">
+    <p>© 2026 VAISHNAVI GUPTA <span class="text-zinc-700">|</span> TECH & LITERATURE</p>
+    <p class="flex items-center gap-1.5">
+      BUILT WITH 
+      <span class="text-zinc-300 font-semibold">ASTRO</span>, 
+      <span class="text-zinc-300 font-semibold">TAILWIND</span> &amp; 
+      <span class="text-zinc-300 font-semibold">TYPESCRIPT</span>
+    </p>
+  </footer>
+
 </Layout>
