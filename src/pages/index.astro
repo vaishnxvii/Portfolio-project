@@ -1,147 +1,184 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Content structure mirroring tikitatech layout
-const navigationSections = [
-  {
-    title: "PROJECTS",
-    items: [
-      { name: "After Life: Reborn of Love", desc: "Published novel (2022)", tag: "NOVEL", url: "#" },
-      { name: "Indigenous Epistemologies", desc: "Academic research on Chinua Achebe", tag: "THESIS", url: "#" },
-      { name: "Drama Analysis Matrix", desc: "Theoretical drama research", tag: "RESEARCH", url: "#" }
-    ]
-  },
-  {
-    title: "RESOURCES & LOGS",
-    items: [
-      { name: "Python Utilities", desc: "System scripts & automation tools", tag: "PYTHON", url: "#" },
-      { name: "UI/UX Verification Suite", desc: "Dashboard testing & audit framework", tag: "UX AUDIT", url: "#" },
-      { name: "Niaz Ahmed Debate", desc: "1st Place - AI Ethics & Society", tag: "AWARD", url: "#" }
-    ]
-  },
-  {
-    title: "TOOLS & EXPERIMENTS",
-    items: [
-      { name: "XX RASE Conference", desc: "Literary event coordination system", tag: "EVENT", url: "#" },
-      { name: "Poona Drama Quiz", desc: "87% Score specialized analysis", tag: "CERT", url: "#" },
-      { name: "Build Log", desc: "Dev & writing process notes", tag: "LOGS", url: "#" }
-    ]
-  }
+// Comprehensive category links mimicking Tikita's deep grid architecture
+const columnOne = [
+  { name: "Apps & Software", url: "#", tag: "SYS" },
+  { name: "Hardware Projects", url: "#", tag: "HW" },
+  { name: "AI Tools & GPTs", url: "#", tag: "AI" },
+  { name: "Python Scripts", url: "#", tag: "CODE" }
+];
+
+const columnTwo = [
+  { name: "Build Logs & Notes", url: "#", tag: "LOG" },
+  { name: "System Architecture", url: "#", tag: "DOC" },
+  { name: "Indigenous Literatures", url: "#", tag: "M.A." },
+  { name: "Contact System", url: "#", tag: "NET" }
+];
+
+const columnThree = [
+  { name: "Home Terminal", url: "#", tag: "ROOT" },
+  { name: "Project Timeline", url: "#", tag: "TIME" },
+  { name: "Literary Drawings", url: "#", tag: "ART" },
+  { name: "Now Dashboard", url: "#", tag: "CUR" }
+];
+
+const columnFour = [
+  { name: "Interactive Todo List", url: "#", tag: "TOOL" },
+  { name: "Memory Card Game", url: "#", tag: "GAME" },
+  { name: "Debate & AI Ethics", url: "#", tag: "WIN" },
+  { name: "Tech News Feed", url: "#", tag: "RSS" }
 ];
 
 const socialLinks = [
+  { label: "LINKEDIN", url: "https://www.linkedin.com" },
   { label: "GITHUB", url: "https://github.com/vaishnxvii" },
-  { label: "LINKEDIN", url: "#" },
   { label: "X / TWITTER", url: "#" },
-  { label: "EMAIL", url: "mailto:contact@example.com" }
+  { label: "YOUTUBE", url: "#" },
+  { label: "SUBSTACK", url: "#" }
 ];
 ---
 
-<Layout title="VAISHNAVI GUPTA // SYSTEM PORTFOLIO">
-  
-  <!-- TOP NAVIGATION HEADER -->
-  <header class="border border-zinc-800 bg-[#121215]/90 backdrop-blur-sm p-5 mb-8 shadow-2xl relative overflow-hidden group">
-    <!-- Top accent border glow -->
+<Layout title="VAISHNAVI GUPTA // TECH WIZ & AUTHOR">
+
+  <!-- TOP HEADER HUD -->
+  <header class="border border-zinc-800 bg-[#121215]/90 backdrop-blur-md p-6 mb-6 shadow-2xl relative">
     <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-    
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
       <div>
         <div class="flex items-center space-x-3">
-          <!-- Pulsing Live Indicator -->
-          <span class="relative flex h-3 w-3">
+          <span class="relative flex h-2.5 w-2.5">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
           <h1 class="text-xl font-bold tracking-wider text-white text-glow-cyan">VAISHNAVI GUPTA</h1>
         </div>
         <p class="text-xs text-zinc-400 mt-1 font-mono tracking-tight">
-          M.A. LITERATURE <span class="text-zinc-600">|</span> PYTHON DEVELOPER <span class="text-zinc-600">|</span> AUTHOR
+          M.A. ENGLISH <span class="text-zinc-600">|</span> PYTHON DEVELOPER <span class="text-zinc-600">|</span> PUBLISHED AUTHOR
         </p>
       </div>
-
-      <div class="text-xs text-zinc-500 space-y-1 font-mono">
-        <p class="flex items-center gap-2">
-          <span class="text-zinc-600">STATUS:</span> 
-          <span class="text-emerald-400 font-semibold text-glow-green">ONLINE</span>
-        </p>
+      <div class="text-xs text-zinc-500 font-mono space-y-0.5 md:text-right">
+        <p><span class="text-zinc-600">STATUS:</span> <span class="text-emerald-400 font-bold">ONLINE</span></p>
         <p><span class="text-zinc-600">LOC:</span> LUCKNOW, IN</p>
       </div>
     </div>
   </header>
 
-  <!-- MAIN TERMINAL GRID SYSTEM -->
-  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-    {navigationSections.map((section) => (
-      <div class="border border-zinc-800 bg-[#121215]/80 p-5 relative flex flex-col justify-between hover:border-cyan-500/80 transition-all duration-300 group shadow-lg">
-        
-        <div>
-          <!-- Section Indicator Bullet Header -->
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-zinc-800/80">
-            <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300">
-              <span class="text-cyan-400 animate-pulse">●</span>
-              <h2>{section.title}</h2>
-            </div>
-            <span class="text-[10px] text-zinc-600 font-mono">SYS.DIR</span>
-          </div>
-          
-          <!-- Content List -->
-          <ul class="space-y-4">
-            {section.items.map((item) => (
-              <li class="group/item border-b border-zinc-800/40 pb-3 last:border-none">
-                <a href={item.url} class="block">
-                  <div class="flex items-center justify-between text-xs font-semibold text-zinc-200 group-hover/item:text-cyan-400 transition-colors">
-                    <span class="flex items-center gap-1.5">
-                      <span class="text-zinc-600 group-hover/item:text-cyan-400 transition-colors">-</span>
-                      {item.name}
-                    </span>
-                    <span class="text-[9px] bg-zinc-900 border border-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded group-hover/item:border-cyan-500/50 transition-colors">
-                      {item.tag}
-                    </span>
-                  </div>
-                  <p class="text-[11px] text-zinc-500 mt-1 pl-3 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-      </div>
-    ))}
-  </main>
-
-  <!-- CONNECT & SOCIALS SECTION -->
-  <section class="border border-zinc-800 bg-[#121215]/80 p-5 mb-12">
-    <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4 pb-2 border-b border-zinc-800">
-      <span class="text-cyan-400">●</span>
-      <h2>CONNECT // NETWORKS</h2>
+  <!-- HIGHLIGHTED FEATURE BANNER (MATCHING TIKITA'S LATEST CARDS) -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="border border-zinc-800 bg-[#121215] p-5 hover:border-cyan-500 transition-all duration-300 group">
+      <div class="text-[10px] text-cyan-400 font-bold tracking-widest mb-1">FEATURED NOVEL</div>
+      <h2 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">After Life : Reborn of Love (2022)</h2>
+      <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Published romantic fiction exploring deep existential emotional frameworks.</p>
     </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-      {socialLinks.map((social) => (
-        <a 
-          href={social.url} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="border border-zinc-800 bg-zinc-900/50 p-2.5 text-center text-xs text-zinc-400 hover:text-white hover:border-cyan-500 hover:bg-cyan-950/20 transition-all duration-200 flex items-center justify-center gap-2 group"
-        >
-          <span class="text-zinc-600 group-hover:text-cyan-400">&gt;</span>
-          <span>{social.label}</span>
-        </a>
-      ))}
+    <div class="border border-zinc-800 bg-[#121215] p-5 hover:border-cyan-500 transition-all duration-300 group">
+      <div class="text-[10px] text-cyan-400 font-bold tracking-widest mb-1">ACADEMIC RESEARCH</div>
+      <h2 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Indigenous Epistemologies</h2>
+      <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Dissertation analyzing traditional perspectives in Chinua Achebe's works.</p>
+    </div>
+    <div class="border border-zinc-800 bg-[#121215] p-5 hover:border-cyan-500 transition-all duration-300 group">
+      <div class="text-[10px] text-cyan-400 font-bold tracking-widest mb-1">DEV & UI/UX</div>
+      <h2 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Python & Dashboard Audit</h2>
+      <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Rigorous functional testing, automation tools, and UI interface alignment maps.</p>
     </div>
   </section>
 
-  <!-- SYSTEM FOOTER -->
-  <footer class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-zinc-500 gap-4">
-    <p>© 2026 VAISHNAVI GUPTA <span class="text-zinc-700">|</span> TECH & LITERATURE</p>
-    <p class="flex items-center gap-1.5">
-      BUILT WITH 
-      <span class="text-zinc-300 font-semibold">ASTRO</span>, 
-      <span class="text-zinc-300 font-semibold">TAILWIND</span> &amp; 
-      <span class="text-zinc-300 font-semibold">TYPESCRIPT</span>
-    </p>
+  <!-- MAIN MULTI-COLUMN BENTO FOOTER GRID (EXACT TIKITA STRUCTURE) -->
+  <footer class="border border-zinc-800 bg-[#121215]/90 p-6 md:p-8 mb-6 shadow-2xl">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      
+      <!-- COLUMN 1: PROJECTS -->
+      <div>
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4">
+          <span class="text-cyan-400">●</span>
+          <span>PROJECTS</span>
+        </div>
+        <ul class="space-y-2.5">
+          {columnOne.map((item) => (
+            <li>
+              <a href={item.url} class="text-xs text-zinc-400 hover:text-white flex items-center group transition-transform hover:translate-x-1">
+                <span class="text-zinc-600 mr-2 group-hover:text-cyan-400">-</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- COLUMN 2: RESOURCES -->
+      <div>
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4">
+          <span class="text-cyan-400">●</span>
+          <span>RESOURCES</span>
+        </div>
+        <ul class="space-y-2.5">
+          {columnTwo.map((item) => (
+            <li>
+              <a href={item.url} class="text-xs text-zinc-400 hover:text-white flex items-center group transition-transform hover:translate-x-1">
+                <span class="text-zinc-600 mr-2 group-hover:text-cyan-400">-</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- COLUMN 3: EXPLORE -->
+      <div>
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4">
+          <span class="text-cyan-400">●</span>
+          <span>EXPLORE</span>
+        </div>
+        <ul class="space-y-2.5">
+          {columnThree.map((item) => (
+            <li>
+              <a href={item.url} class="text-xs text-zinc-400 hover:text-white flex items-center group transition-transform hover:translate-x-1">
+                <span class="text-zinc-600 mr-2 group-hover:text-cyan-400">-</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- COLUMN 4: TOOLS & GAMES -->
+      <div>
+        <div class="flex items-center space-x-2 text-xs font-bold tracking-widest text-zinc-300 mb-4">
+          <span class="text-cyan-400">●</span>
+          <span>TOOLS & GAMES</span>
+        </div>
+        <ul class="space-y-2.5">
+          {columnFour.map((item) => (
+            <li>
+              <a href={item.url} class="text-xs text-zinc-400 hover:text-white flex items-center group transition-transform hover:translate-x-1">
+                <span class="text-zinc-600 mr-2 group-hover:text-cyan-400">-</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- CONNECT BUTTONS ROW -->
+    <div class="pt-6 border-t border-zinc-800">
+      <div class="text-[10px] font-bold tracking-widest text-zinc-500 mb-3">J4 - CONNECT</div>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+        {socialLinks.map((social) => (
+          <a href={social.url} target="_blank" rel="noopener noreferrer" class="border border-zinc-800 bg-zinc-900/60 p-2 text-center text-xs text-zinc-400 hover:text-white hover:border-cyan-500 transition-colors flex items-center justify-center space-x-1.5">
+            <span class="text-cyan-400 text-[10px]">↗</span>
+            <span>{social.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
   </footer>
+
+  <!-- BOTTOM COPYRIGHT BAR -->
+  <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-zinc-500 px-2 gap-2">
+    <p>© 2026 VAISHNAVI GUPTA · TECH WIZ</p>
+    <p>Built with <span class="text-zinc-300 font-semibold">Astro</span>, <span class="text-zinc-300 font-semibold">React</span> &amp; <span class="text-zinc-300 font-semibold">TypeScript</span></p>
+  </div>
 
 </Layout>
