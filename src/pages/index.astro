@@ -3,6 +3,19 @@ import Layout from '../layouts/Layout.astro';
 
 const projects = [
   {
+    id: "voice-assistant",
+    name: "AI VOICE HEALTHCARE ASSISTANT",
+    description: "Developed an AI-powered voice healthcare assistant enabling real-time multilingual patient interactions, appointment booking, and intelligent healthcare assistance. Built scalable backend APIs with FastAPI, PostgreSQL, SQLAlchemy, Redis, and Twilio, deployed on Render.",
+    tags: ["PYTHON", "FASTAPI", "GROQ LLM", "WHISPER STT", "SARVAM AI TTS", "POSTGRESQL", "REDIS", "NEXT.JS"],
+    github: "https://github.com/vaishnxvii",
+    demo: "#",
+    metrics: [
+      { value: "MULTILINGUAL", label: "VOICE INTERACTION" },
+      { value: "FASTAPI/GROQ", label: "AI ENGINE" },
+      { value: "RENDER/REDIS", label: "INFRASTRUCTURE" },
+    ],
+  },
+  {
     id: "rainfall",
     name: "RAINFALL PREDICTION",
     description: "Machine learning model predicting rainfall with 87.02% accuracy using Python & Scikit-learn, evaluating XGBoost, SVM, and Logistic Regression algorithms via ROC-AUC scores.",
@@ -195,6 +208,143 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
   <!-- SECTION DIVIDER                              -->
   <!-- ============================================ -->
   <div class="border-t-2 border-black mb-8"></div>
+
+  <!-- ============================================ -->
+  <!-- WORK EXPERIENCE SECTION                     -->
+  <!-- ============================================ -->
+  <section id="experience" class="mb-10">
+
+    <!-- Terminal Command Pill -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-[#1A1A1A] text-white rounded-full px-5 py-1 text-xs font-mono tracking-wider inline-flex items-center gap-1">
+        <span class="text-white/60">~/DIGITAL-GARDEN $</span>
+        <span class="text-[#22C55E]">LS ~/EXPERIENCE --TIMELINE</span>
+      </div>
+    </div>
+
+    <!-- Pink Banner -->
+    <div class="relative mb-6">
+      <div class="absolute -left-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="absolute -right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="bg-[#FF7597] border-2 border-black shadow-[4px_4px_0px_0px_#000] px-6 py-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 8px 8px;"></div>
+        <h2 class="text-xl md:text-2xl font-black tracking-widest uppercase relative z-10 text-center">
+          WORK EXPERIENCE
+        </h2>
+      </div>
+    </div>
+
+    <!-- Experience Cards -->
+    <div class="space-y-6">
+
+      <!-- Card 1: Autellia -->
+      <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] p-6">
+        <div class="text-[10px] font-mono tracking-wider text-[#1A1A1A]/50 mb-3 uppercase">
+          $ CAT ./EXPERIENCE/AUTELLIA.MD
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+          <h3 class="text-lg font-black tracking-widest uppercase text-[#FF7597]">
+            AUTELLIA TECHNOLOGY PVT. LTD.
+          </h3>
+          <span class="border-2 border-black px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-[#1A1A1A] text-[#F4EBD9] whitespace-nowrap">
+            APRIL 2026 – PRESENT | REMOTE
+          </span>
+        </div>
+        <p class="text-sm font-black tracking-widest uppercase mb-4">
+          AI/ML DEVELOPER
+        </p>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Developed Python scripts and UiPath AI agents to automate business workflows, integrated external APIs, performed end-to-end testing, and supported deployment.</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Implemented backend functionalities and AI pipelines (data processing, model integration, API development).</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Developed AI Voice Healthcare Assistant MVP using Python, FastAPI, Groq LLM, Sarvam AI TTS, PostgreSQL, SQLAlchemy, Redis.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Edunet -->
+      <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] p-6">
+        <div class="text-[10px] font-mono tracking-wider text-[#1A1A1A]/50 mb-3 uppercase">
+          $ CAT ./EXPERIENCE/EDUNET.MD
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+          <h3 class="text-lg font-black tracking-widest uppercase text-[#FF7597]">
+            EDUNET FOUNDATION
+          </h3>
+          <span class="border-2 border-black px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-[#1A1A1A] text-[#F4EBD9] whitespace-nowrap">
+            AUG 2023 – SEPT 2023 | REMOTE
+          </span>
+        </div>
+        <p class="text-sm font-black tracking-widest uppercase mb-4">
+          ARTIFICIAL INTELLIGENCE INTERN
+        </p>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Engineered sentiment analysis model achieving 85% accuracy using Python, NLTK, and Machine Learning.</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Processed and analyzed 1,000+ restaurant reviews for customer satisfaction insights.</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Cleaned and refined 95% of raw data, handling 10% missing values via imputation.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Indian Railways -->
+      <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] p-6">
+        <div class="text-[10px] font-mono tracking-wider text-[#1A1A1A]/50 mb-3 uppercase">
+          $ CAT ./EXPERIENCE/RAILWAYS.MD
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+          <h3 class="text-lg font-black tracking-widest uppercase text-[#FF7597]">
+            INDIAN RAILWAYS (R.D.S.O)
+          </h3>
+          <span class="border-2 border-black px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-[#1A1A1A] text-[#F4EBD9] whitespace-nowrap">
+            JUNE 2023 – AUG 2023 | LUCKNOW, U.P.
+          </span>
+        </div>
+        <p class="text-sm font-black tracking-widest uppercase mb-4">
+          WEB DEVELOPMENT INTERN
+        </p>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Developed Django-based Task Planner Web Application using Python and Django frameworks.</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Implemented user authentication securing access for 15+ team members.</span>
+          </li>
+          <li class="flex items-start gap-2 text-xs font-bold tracking-wide text-[#1A1A1A]/70 leading-relaxed">
+            <span class="text-[#FF7597] mt-0.5 shrink-0">&gt;</span>
+            <span>Collaborated via Git version control to organize modifications and task assignments.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ============================================ -->
   <!-- TECH STACK SECTION                          -->
@@ -433,6 +583,223 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
   </section>
 
   <!-- ============================================ -->
+  <!-- CERTIFICATIONS SECTION (FOLDER GRID)         -->
+  <!-- ============================================ -->
+  <section id="certifications" class="mb-10">
+
+    <!-- Terminal Command Pill -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-[#1A1A1A] text-white rounded-full px-5 py-1 text-xs font-mono tracking-wider inline-flex items-center gap-1">
+        <span class="text-white/60">~/DIGITAL-GARDEN $</span>
+        <span class="text-[#22C55E]">LS ~/CERTIFICATES --FOLDERS</span>
+      </div>
+    </div>
+
+    <!-- Pink Banner -->
+    <div class="relative mb-6">
+      <div class="absolute -left-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="absolute -right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="bg-[#FF7597] border-2 border-black shadow-[4px_4px_0px_0px_#000] px-6 py-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 8px 8px;"></div>
+        <h2 class="text-xl md:text-2xl font-black tracking-widest uppercase relative z-10 text-center">
+          CERTIFICATIONS
+        </h2>
+      </div>
+    </div>
+
+    <!-- Folder Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-6">
+
+      <!-- Certificate 01 -->
+      <div class="cursor-pointer certificate-folder" data-cert-index="0">
+        <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+          <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+          </div>
+          <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+          </svg>
+          <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">01</span>
+        </div>
+        <p class="text-[10px] font-bold tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          UiPath Automation Training
+        </p>
+      </div>
+
+      <!-- Certificate 02 -->
+      <div class="cursor-pointer certificate-folder" data-cert-index="1">
+        <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+          <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+          </div>
+          <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+          </svg>
+          <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">02</span>
+        </div>
+        <p class="text-[10px] font-bold tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          Data Science Placement Course
+        </p>
+      </div>
+
+      <!-- Certificate 03 -->
+      <div class="cursor-pointer certificate-folder" data-cert-index="2">
+        <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+          <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+          </div>
+          <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+          </svg>
+          <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">03</span>
+        </div>
+        <p class="text-[10px] font-bold tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          Data Analysis Using Python
+        </p>
+      </div>
+
+      <!-- Certificate 04 -->
+      <div class="cursor-pointer certificate-folder" data-cert-index="3">
+        <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+          <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+          </div>
+          <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+          </svg>
+          <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">04</span>
+        </div>
+        <p class="text-[10px] font-bold tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          Samsung Python Programming
+        </p>
+      </div>
+
+      <!-- Certificate 05 -->
+      <div class="cursor-pointer certificate-folder" data-cert-index="4">
+        <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+          <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+            <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
+          </div>
+          <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
+          </svg>
+          <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">05</span>
+        </div>
+        <p class="text-[10px] font-bold tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          Samsung Artificial Intelligence
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Folder Summary Footer -->
+    <div class="border-2 border-black bg-[#F4EBD9] px-4 py-2 shadow-[3px_3px_0px_0px_#000] text-[10px] font-bold tracking-widest uppercase text-[#1A1A1A]/50">
+      FOLDERS: 5 | FILES: 5 | DEPTH: 0
+    </div>
+
+    <!-- Expanded Certificate View (hidden by default) -->
+    <div id="certificate-detail" class="hidden border-2 border-black bg-[#F4EBD9] p-6 shadow-[4px_4px_0px_0px_#000] mt-6 relative">
+      <button id="cert-close" class="absolute top-2 right-2 w-6 h-6 border-2 border-black bg-[#1A1A1A] text-[#F4EBD9] flex items-center justify-center text-xs font-bold hover:bg-[#FF7597] hover:text-[#1A1A1A] transition-colors">&times;</button>
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 border-2 border-black bg-white/60 flex items-center justify-center shrink-0">
+          <svg class="w-8 h-8 text-[#FF7597]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <div class="text-[10px] font-mono tracking-wider text-[#1A1A1A]/50 mb-1 uppercase">
+            $ CAT ./CERTIFICATES/<span id="cert-filename">UIPATH.TXT</span>
+          </div>
+          <h3 id="cert-title" class="text-sm font-black tracking-widest uppercase text-[#FF7597] mb-2">
+            UiPath Academy Automation Developer Associate Training - UiPath (2026)
+          </h3>
+          <a id="cert-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 border-2 border-black px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase bg-[#1A1A1A] text-[#F4EBD9] hover:bg-[#FF7597] hover:text-[#1A1A1A] transition-colors shadow-[2px_2px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+            ↗ VIEW CERTIFICATE
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================ -->
+  <!-- EDUCATION SECTION (TABLE CONTAINER)          -->
+  <!-- ============================================ -->
+  <section id="education" class="mb-10">
+
+    <!-- Terminal Command Pill -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-[#1A1A1A] text-white rounded-full px-5 py-1 text-xs font-mono tracking-wider inline-flex items-center gap-1">
+        <span class="text-white/60">~/DIGITAL-GARDEN $</span>
+        <span class="text-[#22C55E]">CAT ~/EDUCATION --TABLE</span>
+      </div>
+    </div>
+
+    <!-- Pink Banner -->
+    <div class="relative mb-6">
+      <div class="absolute -left-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="absolute -right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+        <span class="w-2.5 h-2.5 bg-[#1A1A1A] block"></span>
+      </div>
+      <div class="bg-[#FF7597] border-2 border-black shadow-[4px_4px_0px_0px_#000] px-6 py-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 8px 8px;"></div>
+        <h2 class="text-xl md:text-2xl font-black tracking-widest uppercase relative z-10 text-center">
+          EDUCATION
+        </h2>
+      </div>
+    </div>
+
+    <!-- Sub-text caption -->
+    <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-[#1A1A1A]/50 mb-4 text-center">
+      SELECT A ROW TO VIEW DEGREE DETAILS
+    </p>
+
+    <!-- Table Container -->
+    <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] p-6 rounded-lg">
+
+      <!-- Table Sub-header -->
+      <div class="text-[10px] font-mono tracking-wider text-[#1A1A1A]/50 mb-4 uppercase">
+        $ LS ~/EDUCATION --FORMAT=TABLE
+      </div>
+
+      <!-- Education Row 1 -->
+      <div class="flex items-center gap-4 border-2 border-black bg-white/30 p-4 cursor-pointer hover:bg-[#FF7597]/10 transition-colors">
+        <span class="text-[10px] font-bold tracking-widest text-[#1A1A1A]/40 shrink-0">01</span>
+        <span class="bg-[#FF7597] px-2 py-0.5 text-xs font-bold border border-black shrink-0">B.TECH</span>
+        <div class="flex-1">
+          <p class="text-sm font-black tracking-widest uppercase">BABASAHEB BHIMRAO AMBEDKAR UNIVERSITY</p>
+          <p class="text-[10px] font-bold tracking-wide text-[#1A1A1A]/60 mt-0.5">B.Tech in Computer Engineering | Dec 2021 – June 2025 | CGPA: 8.43/10</p>
+        </div>
+        <span class="text-sm font-bold shrink-0">↗</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
   <!-- CONNECT ROW                                  -->
   <!-- ============================================ -->
   <div class="border-t-2 border-black pt-6 mb-8">
@@ -495,6 +862,42 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
           m.classList.toggle('hidden', m.getAttribute('data-project-metrics') !== id);
         });
       });
+    });
+
+    // Certificate folder toggles
+    const certData = [
+      { title: "UiPath Academy Automation Developer Associate Training - UiPath (2026)", filename: "UIPATH.TXT", link: "#" },
+      { title: "Data Science Placement Course - Internshala (2024)", filename: "DATASCIENCE.TXT", link: "#" },
+      { title: "Data Analysis Using Python - IBM (2024)", filename: "DATAANALYSIS.TXT", link: "#" },
+      { title: "Programming with Python - Samsung Innovation Campus (2024)", filename: "SAMSUNG_PYTHON.TXT", link: "#" },
+      { title: "Artificial Intelligence - Samsung Innovation Campus (2023)", filename: "SAMSUNG_AI.TXT", link: "#" },
+    ];
+
+    const folders = document.querySelectorAll('.certificate-folder');
+    const detail = document.getElementById('certificate-detail');
+    const certTitle = document.getElementById('cert-title');
+    const certFilename = document.getElementById('cert-filename');
+    const certLink = document.getElementById('cert-link');
+
+    folders.forEach((folder) => {
+      folder.addEventListener('click', () => {
+        const idx = parseInt(folder.getAttribute('data-cert-index'));
+        const data = certData[idx];
+        certTitle.textContent = data.title;
+        certFilename.textContent = data.filename;
+        certLink.href = data.link;
+        detail.classList.remove('hidden');
+      });
+    });
+
+    document.getElementById('cert-close').addEventListener('click', () => {
+      detail.classList.add('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!detail.classList.contains('hidden') && !detail.contains(e.target) && !e.target.closest('.certificate-folder')) {
+        detail.classList.add('hidden');
+      }
     });
   });
 </script>
