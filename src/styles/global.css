@@ -1,35 +1,140 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream-bg: #F4EBD9;
+  --color-dark-bg: #121215;
+  --color-neo-border: #1C1B1A;
+  --color-accent-pink: #FF7597;
+  --color-accent-cyan: #06B6D4;
+  --color-accent-green: #22C55E;
+}
+
 @layer base {
   body {
-    background-color: #09090b;
-    color: #e4e4e7;
+    background-color: var(--color-cream-bg);
+    color: var(--color-neo-border);
+    overflow-x: hidden;
   }
 }
 
-/* Custom retro scanline and grid background utilities */
+/* CRT/Scanline Overlay (cream bg variant) */
 .bg-scanlines {
   background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.3) 50%
+    rgba(244, 235, 217, 0) 50%, 
+    rgba(0, 0, 0, 0.03) 50%
   ), linear-gradient(
     90deg,
-    rgba(255, 0, 0, 0.03),
-    rgba(0, 255, 0, 0.01),
-    rgba(0, 0, 255, 0.03)
+    rgba(255, 0, 0, 0.01),
+    rgba(0, 255, 0, 0.005),
+    rgba(0, 0, 255, 0.01)
   );
-  background-size: 100% 3px, 6px 100%;
+  background-size: 100% 2px, 4px 100%;
 }
 
+/* CRT/Scanline Overlay (dark bg variant) */
+.bg-scanlines-dark {
+  background: linear-gradient(
+    rgba(18, 18, 21, 0) 50%, 
+    rgba(255, 255, 255, 0.015) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 2px, 4px 100%;
+}
+
+/* Dot Matrix Pattern */
 .bg-grid-pattern {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
-  background-size: 16px 16px;
+  background-image: radial-gradient(circle, rgba(28,27,26,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
+/* Glow Utilities */
 .text-glow-cyan {
   text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
 }
 
+.text-glow-pink {
+  text-shadow: 0 0 8px rgba(255, 117, 151, 0.6);
+}
+
 .text-glow-green {
   text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+/* Brutalist Shadow Utilities */
+.shadow-brutalist {
+  box-shadow: 4px 4px 0px 0px #1C1B1A;
+}
+
+.shadow-brutalist-sm {
+  box-shadow: 2px 2px 0px 0px #1C1B1A;
+}
+
+.shadow-brutalist-lg {
+  box-shadow: 8px 8px 0px 0px #1C1B1A;
+}
+
+/* Hover Transitions */
+.hover-brutalist {
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hover-brutalist:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #1C1B1A;
+}
+
+.hover-brutalist:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px #1C1B1A;
+}
+
+/* Pulse Animation for Status Badges */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* CRT Flicker */
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.98; }
+  15% { opacity: 0.96; }
+  20% { opacity: 0.99; }
+  100% { opacity: 0.98; }
+}
+
+.animate-flicker {
+  animation: flicker 4s infinite;
+}
+
+/* Border Glow Utilities */
+.border-glow-cyan {
+  box-shadow: 0 0 0 1px #06B6D4, 0 0 8px rgba(6, 182, 212, 0.3), 4px 4px 0px 0px #1C1B1A;
+}
+
+.border-glow-pink {
+  box-shadow: 0 0 0 1px #FF7597, 0 0 8px rgba(255, 117, 151, 0.3), 4px 4px 0px 0px #1C1B1A;
+}
+
+.border-glow-green {
+  box-shadow: 0 0 0 1px #22C55E, 0 0 8px rgba(34, 197, 94, 0.3), 4px 4px 0px 0px #1C1B1A;
+}
+
+/* Focus Ring - Cyan for accessibility */
+*:focus-visible {
+  outline: 2px solid #06B6D4;
+  outline-offset: 2px;
 }
