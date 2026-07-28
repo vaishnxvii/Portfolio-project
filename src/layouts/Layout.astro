@@ -2,7 +2,7 @@
 import '../styles/global.css';
 
 interface Props {
-	title?: string;
+  title?: string;
 }
 
 const { title = "Vaishnavi Gupta // Portfolio" } = Astro.props;
@@ -10,49 +10,24 @@ const { title = "Vaishnavi Gupta // Portfolio" } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-		
-		<!-- Retro Monospace Font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-[#F4EBD9] text-[#1C1B1A] font-mono antialiased min-h-screen border-t-4 border-[#1C1B1A] relative overflow-x-hidden animate-flicker">
-		<!-- CRT Overlay -->
-		<div class="pointer-events-none fixed inset-0 z-50 bg-scanlines opacity-30 mix-blend-multiply"></div>
-		<div class="pointer-events-none fixed inset-0 z-50 bg-grid-pattern mix-blend-multiply opacity-20"></div>
-		
-		<div class="max-w-5xl mx-auto px-4 md:px-8 py-8 relative z-10">
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#F4EBD9] text-[#1A1A1A] font-mono antialiased min-h-screen">
+    <div class="max-w-[860px] mx-auto px-4 md:px-8 pt-6 pb-16">
+      <slot />
+    </div>
+  </body>
 </html>
 
 <style is:global>
-	body {
-		font-family: 'JetBrains Mono', monospace;
-	}
-	
-	/* Custom scrollbar for retro feel */
-	::-webkit-scrollbar {
-		width: 8px;
-	}
-	
-	::-webkit-scrollbar-track {
-		background: #F4EBD9;
-		border-left: 2px solid #1C1B1A;
-	}
-	
-	::-webkit-scrollbar-thumb {
-		background: #1C1B1A;
-		border: 1px solid #F4EBD9;
-	}
-	
-	::-webkit-scrollbar-thumb:hover {
-		background: #06B6D4;
-	}
+  body {
+    font-family: 'JetBrains Mono', monospace;
+  }
 </style>

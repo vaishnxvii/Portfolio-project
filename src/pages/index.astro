@@ -1,244 +1,228 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const columnOne = [
-  { name: "Apps & Software", url: "#", tag: "SYS" },
-  { name: "Hardware Projects", url: "#", tag: "HW" },
-  { name: "AI Tools & GPTs", url: "#", tag: "AI" },
-  { name: "Python Scripts", url: "#", tag: "CODE" }
+const columns = [
+  {
+    title: "PROJECTS",
+    items: [
+      { name: "Apps & Software", tag: "SYS" },
+      { name: "Hardware Projects", tag: "HW" },
+      { name: "AI Tools & GPTs", tag: "AI" },
+      { name: "Python Scripts", tag: "CODE" },
+    ],
+  },
+  {
+    title: "RESOURCES",
+    items: [
+      { name: "Build Logs & Notes", tag: "LOG" },
+      { name: "System Architecture", tag: "DOC" },
+      { name: "Indigenous Literatures", tag: "M.A." },
+      { name: "Contact System", tag: "NET" },
+    ],
+  },
+  {
+    title: "EXPLORE",
+    items: [
+      { name: "Home Terminal", tag: "ROOT" },
+      { name: "Project Timeline", tag: "TIME" },
+      { name: "Literary Drawings", tag: "ART" },
+      { name: "Now Dashboard", tag: "CUR" },
+    ],
+  },
+  {
+    title: "TOOLS & GAMES",
+    items: [
+      { name: "Interactive Todo List", tag: "TOOL" },
+      { name: "Memory Card Game", tag: "GAME" },
+      { name: "Debate & AI Ethics", tag: "WIN" },
+      { name: "Tech News Feed", tag: "RSS" },
+    ],
+  },
 ];
 
-const columnTwo = [
-  { name: "Build Logs & Notes", url: "#", tag: "LOG" },
-  { name: "System Architecture", url: "#", tag: "DOC" },
-  { name: "Indigenous Literatures", url: "#", tag: "M.A." },
-  { name: "Contact System", url: "#", tag: "NET" }
-];
-
-const columnThree = [
-  { name: "Home Terminal", url: "#", tag: "ROOT" },
-  { name: "Project Timeline", url: "#", tag: "TIME" },
-  { name: "Literary Drawings", url: "#", tag: "ART" },
-  { name: "Now Dashboard", url: "#", tag: "CUR" }
-];
-
-const columnFour = [
-  { name: "Interactive Todo List", url: "#", tag: "TOOL" },
-  { name: "Memory Card Game", url: "#", tag: "GAME" },
-  { name: "Debate & AI Ethics", url: "#", tag: "WIN" },
-  { name: "Tech News Feed", url: "#", tag: "RSS" }
-];
-
-const socialLinks = [
-  { label: "LINKEDIN", url: "https://www.linkedin.com" },
+const socials = [
   { label: "GITHUB", url: "https://github.com/vaishnxvii" },
+  { label: "LINKEDIN", url: "https://www.linkedin.com" },
   { label: "X / TWITTER", url: "#" },
   { label: "YOUTUBE", url: "#" },
-  { label: "SUBSTACK", url: "#" }
+  { label: "SUBSTACK", url: "#" },
 ];
+
+const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
 ---
 
-<Layout title="VAISHNAVI GUPTA // TECH WIZ & AUTHOR">
+<Layout title="VAISHNAVI GUPTA // PORTFOLIO">
 
-  <!-- TOP UTILITY HUD -->
-  <header class="border-2 border-[#1C1B1A] bg-[#F4EBD9]/80 backdrop-blur-md p-4 mb-8 shadow-[4px_4px_0px_0px_#1C1B1A] relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center space-x-3">
-      <span class="relative flex h-3 w-3">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22C55E] opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-[#22C55E] border-2 border-[#1C1B1A]"></span>
-      </span>
-      <h1 class="text-lg font-black tracking-[0.2em] text-[#1C1B1A]">~/VGUPTA</h1>
-    </div>
-    
-    <div class="hidden md:flex items-center space-x-4 text-[10px] tracking-[0.2em] font-bold text-[#1C1B1A] uppercase">
-      <span class="bg-[#1C1B1A]/10 px-3 py-1.5 border-2 border-[#1C1B1A] shadow-[2px_2px_0px_0px_#1C1B1A]">LOC: LUCKNOW, IN</span>
-      <span class="text-[#06B6D4]">●</span>
-      <span class="bg-[#22C55E] px-3 py-1.5 border-2 border-[#1C1B1A] text-[#1C1B1A] shadow-[2px_2px_0px_0px_#1C1B1A]">STATUS: ONLINE</span>
-      <span class="text-[#FF7597]">●</span>
-      <span class="bg-[#FF7597] px-3 py-1.5 border-2 border-[#1C1B1A] text-[#1C1B1A] shadow-[2px_2px_0px_0px_#1C1B1A]">{new Date().toLocaleTimeString()}</span>
+  <!-- ============================================ -->
+  <!-- TOP HUD NAVIGATION BAR                       -->
+  <!-- ============================================ -->
+  <nav class="flex items-center justify-between py-3 border-b-2 border-black mb-8">
+
+    <!-- Left: Brand -->
+    <div class="flex items-center gap-2 text-xs font-bold tracking-widest">
+      <span class="w-2.5 h-2.5 bg-[#22C55E] border border-black inline-block"></span>
+      <span>~/VGUPTA</span>
     </div>
 
-    <div class="flex items-center space-x-4">
-      <a href="#" class="hover:text-[#06B6D4] transition-colors">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"></path></svg>
+    <!-- Center: Metadata -->
+    <div class="hidden md:flex items-center gap-3 text-[10px] font-bold tracking-widest text-[#1A1A1A]/60 uppercase">
+      <span>LOC: LUCKNOW, IN</span>
+      <span class="text-[#FF6B8B]">&middot;</span>
+      <span>STATUS: ONLINE</span>
+      <span class="text-[#FF6B8B]">&middot;</span>
+      <span>{now}</span>
+    </div>
+
+    <!-- Right: Social Icons + Divider -->
+    <div class="flex items-center gap-3">
+      <a href="https://github.com/vaishnxvii" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-[#FF6B8B] transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
       </a>
-      <button class="md:hidden border-2 border-[#1C1B1A] p-1 hover:bg-[#1C1B1A] hover:text-[#F4EBD9] transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <span class="w-px h-4 bg-black/20"></span>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-[#FF6B8B] transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <span class="w-px h-4 bg-black/20"></span>
+      <button id="menu-toggle" class="md:hidden border-2 border-black p-0.5 hover:bg-black hover:text-[#F4EBD9] transition-colors" aria-label="Toggle menu">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO BANNER BOX -->
-  <section class="border-2 border-[#1C1B1A] bg-[#121215] p-8 md:p-12 mb-8 shadow-[8px_8px_0px_0px_#1C1B1A] relative overflow-hidden group">
-    <!-- Background Effects -->
-    <div class="absolute inset-0 bg-grid-pattern opacity-20 mix-blend-screen"></div>
-    <div class="absolute inset-0 bg-scanlines-dark opacity-30"></div>
-    
-    <!-- Side tabs mimicking hardware/punch cards -->
-    <div class="absolute left-0 top-4 bottom-4 w-3 border-r-2 border-[#1C1B1A] bg-[#F4EBD9]/10 flex flex-col justify-evenly items-center py-4">
-      <div class="w-2 h-2 rounded-full bg-[#FF7597] shadow-[1px_1px_0px_0px_#1C1B1A]"></div>
-      <div class="w-2 h-2 rounded-full bg-[#06B6D4] shadow-[1px_1px_0px_0px_#1C1B1A]"></div>
-      <div class="w-2 h-2 rounded-full bg-[#22C55E] shadow-[1px_1px_0px_0px_#1C1B1A]"></div>
+  <!-- ============================================ -->
+  <!-- TERMINAL BADGE                               -->
+  <!-- ============================================ -->
+  <div class="flex justify-center mb-8">
+    <div class="bg-[#1A1A1A] text-white rounded-full px-4 py-1 text-[11px] font-bold tracking-widest inline-flex items-center gap-1">
+      <span class="text-white/60">~/DIGITAL-GARDEN $</span>
+      <span class="text-[#22C55E]">WHOAMI</span>
     </div>
-    
-    <div class="pl-6 relative z-10">
-      <div class="text-[10px] text-[#06B6D4] font-bold tracking-[0.3em] mb-4 uppercase flex items-center bg-[#121215]/80 inline-block px-3 py-1 border border-[#06B6D4]/30">
-        <span class="mr-2 text-[#22C55E] animate-pulse">▶</span> ~/DIGITAL-GARDEN $ WHOAMI
-      </div>
-      
-      <h2 class="text-4xl md:text-6xl font-black text-[#F4EBD9] tracking-tighter mb-4 uppercase">
-        VAISHNAVI <br class="md:hidden"/> GUPTA
-      </h2>
-      
-      <p class="text-sm md:text-base text-[#F4EBD9]/70 max-w-2xl leading-relaxed mb-6">
-        M.A. ENGLISH <span class="text-[#FF7597] mx-1">|</span> PYTHON DEVELOPER <span class="text-[#06B6D4] mx-1">|</span> PUBLISHED AUTHOR
+  </div>
+
+  <!-- ============================================ -->
+  <!-- HERO BANNER BOX                              -->
+  <!-- ============================================ -->
+  <div class="relative mb-10">
+
+    <!-- Side tabs — left -->
+    <div class="absolute -left-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+    </div>
+
+    <!-- Side tabs — right -->
+    <div class="absolute -right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-10">
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+      <span class="w-2.5 h-2.5 bg-[#F4EBD9] border border-black block"></span>
+    </div>
+
+    <!-- The box itself -->
+    <div class="bg-[#FF6B8B] border-2 border-black shadow-[4px_4px_0px_0px_#000] px-8 py-10 md:px-12 md:py-12 relative overflow-hidden">
+
+      <!-- Subtle pixel grid texture -->
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 8px 8px;"></div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-widest uppercase relative z-10 leading-tight">
+        VAISHNAVI GUPTA
+      </h1>
+
+      <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mt-3 text-[#1A1A1A]/50 relative z-10">
+        VAISH-2022 &middot; IN PURSUIT OF TRUTH
       </p>
-      
-      <div class="flex flex-wrap gap-4 mt-8">
-        <a href="#projects" class="inline-flex items-center px-6 py-3 border-2 border-[#F4EBD9] text-[#F4EBD9] text-xs font-black uppercase tracking-[0.2em] hover:bg-[#F4EBD9] hover:text-[#121215] transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(244,235,217,0.5)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
-          VIEW PROJECTS <span class="ml-2">→</span>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PIXEL ART / IMAGE CONTAINER                  -->
+  <!-- ============================================ -->
+  <div class="mb-10">
+    <div class="border-2 border-black shadow-[4px_4px_0px_0px_#000] bg-[#F4EBD9] p-3 inline-block">
+      <div class="border border-black/20 w-full aspect-video max-w-md flex items-center justify-center bg-[#F4EBD9] overflow-hidden" style="image-rendering: pixelated;">
+        <div class="text-[10px] font-bold tracking-widest text-[#1A1A1A]/30 uppercase">[ Portrait ]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- ROLES & SUBTITLES                            -->
+  <!-- ============================================ -->
+  <div class="mb-10 space-y-3">
+    <h2 class="text-lg md:text-xl font-extrabold tracking-widest uppercase">
+      PYTHON DEVELOPER &amp; AUTHOR.
+    </h2>
+    <p class="text-[11px] font-bold tracking-widest uppercase text-[#1A1A1A]/60 leading-relaxed">
+      M.A. LITERATURE &middot; INDIGENOUS EPISTEMOLOGIES &middot; AGENTIC SYSTEMS
+    </p>
+    <p class="text-xs font-bold tracking-wider uppercase pt-1">
+      <a href="#" class="underline decoration-[#FF6B8B] decoration-dotted underline-offset-4 hover:text-[#FF6B8B] transition-colors">
+        AFTER LIFE: REBORN OF LOVE
+      </a>
+      <span class="text-[#1A1A1A]/40 ml-2">(PUBLISHED 2022)</span>
+    </p>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION DIVIDER                              -->
+  <!-- ============================================ -->
+  <div class="border-t-2 border-black mb-8"></div>
+
+  <!-- ============================================ -->
+  <!-- BENTO GRID FOOTER                            -->
+  <!-- ============================================ -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 mb-10">
+    {columns.map((col) => (
+      <div>
+        <div class="text-[10px] font-bold tracking-[0.2em] text-[#1A1A1A] mb-3 uppercase border-b-2 border-black pb-2">
+          {col.title}
+        </div>
+        <ul class="space-y-1.5">
+          {col.items.map((item) => (
+            <li>
+              <a
+                href="#"
+                class="text-[11px] font-bold tracking-wider uppercase flex items-center gap-2 hover:translate-x-1 transition-transform"
+              >
+                <span class="text-[#1A1A1A]/30">-</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CONNECT ROW                                  -->
+  <!-- ============================================ -->
+  <div class="border-t-2 border-black pt-6 mb-8">
+    <div class="text-[10px] font-bold tracking-[0.2em] text-[#1A1A1A]/50 mb-3 uppercase">
+      CONNECT
+    </div>
+    <div class="flex flex-wrap gap-2">
+      {socials.map((s) => (
+        <a
+          href={s.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border-2 border-black px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-[#F4EBD9] transition-colors shadow-[2px_2px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+        >
+          {s.label}
         </a>
-        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-[#FF7597] border-2 border-[#1C1B1A] text-[#1C1B1A] text-xs font-black uppercase tracking-[0.2em] hover:bg-[#1C1B1A] hover:text-[#FF7597] transition-all duration-200 shadow-[4px_4px_0px_0px_#1C1B1A] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
-          INIT CONNECTION <span class="ml-2">●</span>
-        </a>
-      </div>
+      ))}
     </div>
-  </section>
+  </div>
 
-  <!-- HIGHLIGHTED FEATURE BANNER (RETRO-FUTURISM CARDS) -->
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-    <div class="border-2 border-[#1C1B1A] bg-[#F4EBD9] p-5 hover:border-[#06B6D4] hover:translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_#1C1B1A] group cursor-pointer relative overflow-hidden">
-      <div class="absolute inset-0 bg-scanlines opacity-10 group-hover:opacity-20 transition-opacity"></div>
-      <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
-      <div class="text-[10px] text-[#FF7597] font-bold tracking-[0.2em] mb-2 relative z-10 uppercase bg-[#121215] inline-block px-2 py-0.5 border border-[#1C1B1A] shadow-[1px_1px_0px_0px_#1C1B1A]">Featured Work</div>
-      <h3 class="text-sm font-bold text-[#1C1B1A] group-hover:text-[#06B6D4] transition-colors relative z-10 uppercase tracking-wide">After Life: Reborn of Love</h3>
-      <p class="text-[11px] text-[#1C1B1A]/60 mt-2 relative z-10 font-mono leading-relaxed">Published romantic fiction exploring deep existential emotional frameworks.</p>
-      <div class="absolute bottom-0 right-0 p-2 text-[10px] font-bold text-[#1C1B1A]/30">SYS.READ</div>
-    </div>
-    
-    <div class="border-2 border-[#1C1B1A] bg-[#F4EBD9] p-5 hover:border-[#FF7597] hover:translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_#1C1B1A] group cursor-pointer relative overflow-hidden">
-      <div class="absolute inset-0 bg-scanlines opacity-10 group-hover:opacity-20 transition-opacity"></div>
-      <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
-      <div class="text-[10px] text-[#06B6D4] font-bold tracking-[0.2em] mb-2 relative z-10 uppercase bg-[#121215] inline-block px-2 py-0.5 border border-[#1C1B1A] shadow-[1px_1px_0px_0px_#1C1B1A]">Academic</div>
-      <h3 class="text-sm font-bold text-[#1C1B1A] group-hover:text-[#FF7597] transition-colors relative z-10 uppercase tracking-wide">Indigenous Epistemologies</h3>
-      <p class="text-[11px] text-[#1C1B1A]/60 mt-2 relative z-10 font-mono leading-relaxed">Dissertation analyzing traditional perspectives in Chinua Achebe's works.</p>
-      <div class="absolute bottom-0 right-0 p-2 text-[10px] font-bold text-[#1C1B1A]/30">DOC.PHD</div>
-    </div>
-    
-    <div class="border-2 border-[#1C1B1A] bg-[#F4EBD9] p-5 hover:border-[#22C55E] hover:translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_#1C1B1A] group cursor-pointer relative overflow-hidden">
-      <div class="absolute inset-0 bg-scanlines opacity-10 group-hover:opacity-20 transition-opacity"></div>
-      <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
-      <div class="text-[10px] text-[#22C55E] font-bold tracking-[0.2em] mb-2 relative z-10 uppercase bg-[#121215] inline-block px-2 py-0.5 border border-[#1C1B1A] shadow-[1px_1px_0px_0px_#1C1B1A]">Dev Log</div>
-      <h3 class="text-sm font-bold text-[#1C1B1A] group-hover:text-[#22C55E] transition-colors relative z-10 uppercase tracking-wide">Python & Dashboard Audit</h3>
-      <p class="text-[11px] text-[#1C1B1A]/60 mt-2 relative z-10 font-mono leading-relaxed">Rigorous functional testing, automation tools, and UI interface alignment maps.</p>
-      <div class="absolute bottom-0 right-0 p-2 text-[10px] font-bold text-[#1C1B1A]/30">DEV.LOG</div>
-    </div>
-  </section>
-
-  <!-- MAIN MULTI-COLUMN BENTO GRID -->
-  <footer id="projects" class="border-2 border-[#1C1B1A] bg-[#121215] p-6 md:p-8 mb-8 shadow-[8px_8px_0px_0px_#1C1B1A] text-[#F4EBD9] relative overflow-hidden">
-    <div class="absolute inset-0 bg-scanlines-dark opacity-20"></div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 relative z-10">
-      
-      <!-- COLUMN 1: PROJECTS -->
-      <div>
-        <div class="flex items-center space-x-2 text-[10px] font-bold tracking-[0.2em] text-[#FF7597] mb-4 uppercase border-b-2 border-[#1C1B1A] pb-2">
-          <span class="text-[#FF7597]">●</span>
-          <span>SYS.DIR // PROJECTS</span>
-        </div>
-        <ul class="space-y-3">
-          {columnOne.map((item) => (
-            <li class="group/item">
-              <a href={item.url} class="text-xs text-[#F4EBD9]/70 hover:text-[#06B6D4] flex items-center group transition-all hover:translate-x-1 uppercase tracking-wider font-mono bg-[#09090b] p-2 border-2 border-[#1C1B1A] hover:border-[#06B6D4] hover:bg-[#06B6D4]/10 shadow-[2px_2px_0px_0px_#1C1B1A] hover:shadow-[4px_4px_0px_0px_#06B6D4] hover:translate-x-[2px] hover:translate-y-[2px]">
-                <span class="text-[#06B6D4] mr-2">→</span>
-                <span class="text-[#F4EBD9]/40 group-hover:text-[#06B6D4] mr-2 border-2 border-[#1C1B1A] group-hover:border-[#06B6D4] px-1 text-[8px] bg-[#1C1B1A] group-hover:bg-[#06B6D4] text-[#F4EBD9]/60 group-hover:text-[#121215]">{item.tag}</span>
-                <span class="group-hover:underline decoration-[#06B6D4] underline-offset-4">{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- COLUMN 2: RESOURCES -->
-      <div>
-        <div class="flex items-center space-x-2 text-[10px] font-bold tracking-[0.2em] text-[#06B6D4] mb-4 uppercase border-b-2 border-[#1C1B1A] pb-2">
-          <span class="text-[#06B6D4]">●</span>
-          <span>SYS.DIR // RESOURCES</span>
-        </div>
-        <ul class="space-y-3">
-          {columnTwo.map((item) => (
-            <li>
-              <a href={item.url} class="text-xs text-[#F4EBD9]/70 hover:text-[#FF7597] flex items-center group transition-all hover:translate-x-1 uppercase tracking-wider font-mono bg-[#09090b] p-2 border-2 border-[#1C1B1A] hover:border-[#FF7597] hover:bg-[#FF7597]/10 shadow-[2px_2px_0px_0px_#1C1B1A] hover:shadow-[4px_4px_0px_0px_#FF7597] hover:translate-x-[2px] hover:translate-y-[2px]">
-                <span class="text-[#FF7597] mr-2">→</span>
-                <span class="text-[#F4EBD9]/40 group-hover:text-[#FF7597] mr-2 border-2 border-[#1C1B1A] group-hover:border-[#FF7597] px-1 text-[8px] bg-[#1C1B1A] group-hover:bg-[#FF7597] text-[#F4EBD9]/60 group-hover:text-[#121215]">{item.tag}</span>
-                <span class="group-hover:underline decoration-[#FF7597] underline-offset-4">{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- COLUMN 3: EXPLORE -->
-      <div>
-        <div class="flex items-center space-x-2 text-[10px] font-bold tracking-[0.2em] text-[#22C55E] mb-4 uppercase border-b-2 border-[#1C1B1A] pb-2">
-          <span class="text-[#22C55E]">●</span>
-          <span>SYS.DIR // EXPLORE</span>
-        </div>
-        <ul class="space-y-3">
-          {columnThree.map((item) => (
-            <li>
-              <a href={item.url} class="text-xs text-[#F4EBD9]/70 hover:text-[#22C55E] flex items-center group transition-all hover:translate-x-1 uppercase tracking-wider font-mono bg-[#09090b] p-2 border-2 border-[#1C1B1A] hover:border-[#22C55E] hover:bg-[#22C55E]/10 shadow-[2px_2px_0px_0px_#1C1B1A] hover:shadow-[4px_4px_0px_0px_#22C55E] hover:translate-x-[2px] hover:translate-y-[2px]">
-                <span class="text-[#22C55E] mr-2">→</span>
-                <span class="text-[#F4EBD9]/40 group-hover:text-[#22C55E] mr-2 border-2 border-[#1C1B1A] group-hover:border-[#22C55E] px-1 text-[8px] bg-[#1C1B1A] group-hover:bg-[#22C55E] text-[#F4EBD9]/60 group-hover:text-[#121215]">{item.tag}</span>
-                <span class="group-hover:underline decoration-[#22C55E] underline-offset-4">{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- COLUMN 4: TOOLS & GAMES -->
-      <div>
-        <div class="flex items-center space-x-2 text-[10px] font-bold tracking-[0.2em] text-[#FF7597] mb-4 uppercase border-b-2 border-[#1C1B1A] pb-2">
-          <span class="text-[#FF7597]">●</span>
-          <span>SYS.DIR // TOOLS</span>
-        </div>
-        <ul class="space-y-3">
-          {columnFour.map((item) => (
-            <li>
-              <a href={item.url} class="text-xs text-[#F4EBD9]/70 hover:text-white flex items-center group transition-all hover:translate-x-1 uppercase tracking-wider font-mono bg-[#09090b] p-2 border-2 border-[#1C1B1A] hover:border-white hover:bg-white/10 shadow-[2px_2px_0px_0px_#1C1B1A] hover:shadow-[4px_4px_0px_0px_white] hover:translate-x-[2px] hover:translate-y-[2px]">
-                <span class="text-white mr-2">→</span>
-                <span class="text-[#F4EBD9]/40 group-hover:text-[#121215] mr-2 border-2 border-[#1C1B1A] group-hover:border-white px-1 text-[8px] bg-[#1C1B1A] group-hover:bg-white text-[#F4EBD9]/60">{item.tag}</span>
-                <span class="group-hover:underline decoration-white underline-offset-4">{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- CONNECT BUTTONS ROW -->
-    <div id="contact" class="pt-6 border-t-2 border-[#1C1B1A] relative z-10">
-      <div class="text-[10px] font-bold tracking-[0.2em] text-[#22C55E] mb-4 uppercase flex items-center">
-        <span class="w-2 h-2 rounded-full bg-[#22C55E] mr-2 animate-pulse"></span>
-        SYS.NET // ESTABLISH CONNECTION
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-        {socialLinks.map((social) => (
-          <a href={social.url} target="_blank" rel="noopener noreferrer" class="border-2 border-[#1C1B1A] bg-[#09090b] p-3 text-center text-[10px] text-[#F4EBD9] hover:text-[#09090b] hover:bg-[#06B6D4] hover:border-[#06B6D4] transition-all duration-200 flex items-center justify-center space-x-2 uppercase tracking-widest font-bold shadow-[3px_3px_0px_0px_#1C1B1A] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
-            <span class="text-[#06B6D4] group-hover:text-[#09090b] text-[10px]">↗</span>
-            <span>{social.label}</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </footer>
-
-  <!-- BOTTOM COPYRIGHT BAR -->
-  <div class="flex flex-col sm:flex-row justify-between items-center text-[10px] text-[#1C1B1A]/70 px-4 py-4 border-t-2 border-[#1C1B1A] uppercase tracking-widest font-mono">
-    <p>© 2026 VAISHNAVI GUPTA // ALL SYSTEMS NOMINAL</p>
-    <p>BUILT WITH <span class="text-[#1C1B1A] font-black">ASTRO</span> + <span class="text-[#1C1B1A] font-black">TAILWIND</span></p>
+  <!-- ============================================ -->
+  <!-- COPYRIGHT BAR                                -->
+  <!-- ============================================ -->
+  <div class="flex flex-col sm:flex-row justify-between items-center text-[10px] font-bold tracking-widest uppercase text-[#1A1A1A]/40 pt-4 border-t border-black/20">
+    <p>&copy; 2026 VAISHNAVI GUPTA</p>
+    <p>BUILT WITH ASTRO + TAILWIND</p>
   </div>
 
 </Layout>
