@@ -620,86 +620,96 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
       <div id="cert-folder-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
 
         <!-- Folder 01 -->
-        <div class="cursor-pointer cert-folder" data-cert-index="0">
-          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+        <div class="cursor-pointer cert-folder group" data-cert-index="0">
+          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2] transition-all duration-200 group-hover:shadow-[6px_6px_0px_0px_#000] group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]">
             <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
             </div>
-            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <span class="absolute top-1 right-1 bg-[#22C55E] border border-black px-1.5 py-0.5 text-[8px] font-bold tracking-widest text-black z-10">2026</span>
+            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4 group-hover:text-[#FF7597] transition-colors" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
             </svg>
             <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">01</span>
+            <span class="absolute bottom-1 left-2 text-[8px] font-bold tracking-widest text-[#FF7597] opacity-0 group-hover:opacity-100 transition-opacity">OPEN &rarr;</span>
           </div>
-          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70 group-hover:text-[#FF7597] transition-colors">
             UiPATH AUTOMATION
           </p>
         </div>
 
         <!-- Folder 02 -->
-        <div class="cursor-pointer cert-folder" data-cert-index="1">
-          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+        <div class="cursor-pointer cert-folder group" data-cert-index="1">
+          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2] transition-all duration-200 group-hover:shadow-[6px_6px_0px_0px_#000] group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]">
             <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
             </div>
-            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <span class="absolute top-1 right-1 bg-[#22C55E] border border-black px-1.5 py-0.5 text-[8px] font-bold tracking-widest text-black z-10">2024</span>
+            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4 group-hover:text-[#FF7597] transition-colors" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
             </svg>
             <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">02</span>
+            <span class="absolute bottom-1 left-2 text-[8px] font-bold tracking-widest text-[#FF7597] opacity-0 group-hover:opacity-100 transition-opacity">OPEN &rarr;</span>
           </div>
-          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70 group-hover:text-[#FF7597] transition-colors">
             DATA SCIENCE
           </p>
         </div>
 
         <!-- Folder 03 -->
-        <div class="cursor-pointer cert-folder" data-cert-index="2">
-          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+        <div class="cursor-pointer cert-folder group" data-cert-index="2">
+          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2] transition-all duration-200 group-hover:shadow-[6px_6px_0px_0px_#000] group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]">
             <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
             </div>
-            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <span class="absolute top-1 right-1 bg-[#22C55E] border border-black px-1.5 py-0.5 text-[8px] font-bold tracking-widest text-black z-10">2024</span>
+            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4 group-hover:text-[#FF7597] transition-colors" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
             </svg>
             <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">03</span>
+            <span class="absolute bottom-1 left-2 text-[8px] font-bold tracking-widest text-[#FF7597] opacity-0 group-hover:opacity-100 transition-opacity">OPEN &rarr;</span>
           </div>
-          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70 group-hover:text-[#FF7597] transition-colors">
             DATA ANALYSIS
           </p>
         </div>
 
         <!-- Folder 04 -->
-        <div class="cursor-pointer cert-folder" data-cert-index="3">
-          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+        <div class="cursor-pointer cert-folder group" data-cert-index="3">
+          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2] transition-all duration-200 group-hover:shadow-[6px_6px_0px_0px_#000] group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]">
             <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
             </div>
-            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <span class="absolute top-1 right-1 bg-[#22C55E] border border-black px-1.5 py-0.5 text-[8px] font-bold tracking-widest text-black z-10">2024</span>
+            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4 group-hover:text-[#FF7597] transition-colors" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
             </svg>
             <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">04</span>
+            <span class="absolute bottom-1 left-2 text-[8px] font-bold tracking-widest text-[#FF7597] opacity-0 group-hover:opacity-100 transition-opacity">OPEN &rarr;</span>
           </div>
-          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70 group-hover:text-[#FF7597] transition-colors">
             SAMSUNG PYTHON
           </p>
         </div>
 
         <!-- Folder 05 -->
-        <div class="cursor-pointer cert-folder" data-cert-index="4">
-          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2]">
+        <div class="cursor-pointer cert-folder group" data-cert-index="4">
+          <div class="border-2 border-black bg-[#F4EBD9] shadow-[4px_4px_0px_0px_#000] relative flex flex-col items-center justify-center p-4 aspect-[3/2] transition-all duration-200 group-hover:shadow-[6px_6px_0px_0px_#000] group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]">
             <div class="absolute -top-[1px] -left-[1px] right-[1px] h-7 bg-[#FF7597] border-b-2 border-black flex items-center px-2 gap-1">
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
               <span class="w-2 h-2 bg-[#1A1A1A] block"></span>
             </div>
-            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4" fill="currentColor" viewBox="0 0 24 24">
+            <span class="absolute top-1 right-1 bg-[#22C55E] border border-black px-1.5 py-0.5 text-[8px] font-bold tracking-widest text-black z-10">2023</span>
+            <svg class="w-10 h-10 text-[#1A1A1A]/30 mt-4 group-hover:text-[#FF7597] transition-colors" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
             </svg>
             <span class="absolute bottom-1 right-2 text-[9px] font-bold tracking-widest text-[#1A1A1A]/40">05</span>
+            <span class="absolute bottom-1 left-2 text-[8px] font-bold tracking-widest text-[#FF7597] opacity-0 group-hover:opacity-100 transition-opacity">OPEN &rarr;</span>
           </div>
-          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70">
+          <p class="text-xs font-black tracking-widest uppercase text-center mt-2 text-[#1A1A1A]/70 group-hover:text-[#FF7597] transition-colors">
             SAMSUNG AI
           </p>
         </div>
@@ -724,14 +734,33 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
         </div>
 
         <!-- Certificate content -->
-        <div class="flex items-start gap-4">
-          <svg class="w-16 h-16 text-[#FF7597] border-2 border-black bg-white/60 p-3" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
-          </svg>
-          <div class="flex-1">
-            <h3 id="cert-detail-title" class="text-[#FF7597] text-lg font-black uppercase leading-tight mb-3">
+        <div class="flex flex-col md:flex-row items-start gap-6">
+          <!-- Document icon -->
+          <div class="border-2 border-black bg-white/60 p-4 shrink-0">
+            <svg class="w-20 h-20 text-[#FF7597]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/>
+              <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+            </svg>
+          </div>
+          <div class="flex-1 w-full">
+            <h3 id="cert-detail-title" class="text-[#FF7597] text-lg md:text-xl font-black uppercase leading-tight mb-4">
               UIPATH ACADEMY AUTOMATION DEVELOPER ASSOCIATE TRAINING - UIPATH (2026)
             </h3>
+            <!-- Metadata Table -->
+            <div class="border-2 border-black bg-white/30 mb-4 divide-y-2 divide-black">
+              <div class="flex items-center px-3 py-2">
+                <span class="text-[9px] font-bold tracking-widest uppercase text-[#1A1A1A]/50 w-24 shrink-0">ISSUER</span>
+                <span id="cert-detail-issuer" class="text-xs font-bold tracking-widest uppercase">UiPath</span>
+              </div>
+              <div class="flex items-center px-3 py-2">
+                <span class="text-[9px] font-bold tracking-widest uppercase text-[#1A1A1A]/50 w-24 shrink-0">YEAR</span>
+                <span id="cert-detail-year" class="text-xs font-bold tracking-widest uppercase">2026</span>
+              </div>
+              <div class="flex items-center px-3 py-2">
+                <span class="text-[9px] font-bold tracking-widest uppercase text-[#1A1A1A]/50 w-24 shrink-0">STATUS</span>
+                <span class="text-xs font-bold tracking-widest uppercase text-[#22C55E]">VERIFIED</span>
+              </div>
+            </div>
             <a id="cert-detail-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 border-2 border-black px-4 py-2 text-[10px] font-bold tracking-widest uppercase bg-[#1A1A1A] text-[#F4EBD9] hover:bg-[#FF7597] hover:text-[#1A1A1A] transition-colors shadow-[2px_2px_0px_0px_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
               ↗ VIEW CERTIFICATE
             </a>
@@ -799,7 +828,7 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
         <div class="flex-1">
           <p class="text-sm font-black tracking-widest uppercase">B.Tech in Computer Scien Engineering</p>
           <p class="text-[10px] font-bold tracking-wide text-[#1A1A1A]/60 mt-0.5">BABASAHEB BHIMRAO AMBEDKAR UNIVERSITY (B.B.A.U)| Dec 2021 – June 2025 </p>
-		  <p class="text-[10px] font-bold tracking-wide text-[#1A1A1A]/60 mt-0.5">CGPA: 8.43/10</p>
+		  <p class="text-[10px] font-black tracking-wide text-[#1A1A1A]/80 mt-0.5">CGPA: 8.43/10</p>
 		</div>
         <span class="text-sm font-bold shrink-0">↗</span>
       </div>
@@ -882,6 +911,8 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
     const certDetailPath = document.getElementById('cert-detail-path');
     const certDetailTitle = document.getElementById('cert-detail-title');
     const certDetailLink = document.getElementById('cert-detail-link');
+    const certDetailIssuer = document.getElementById('cert-detail-issuer');
+    const certDetailYear = document.getElementById('cert-detail-year');
 
     const certData = [
       {
@@ -889,30 +920,40 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
         label: "UiPATH AUTOMATION",
         title: "UIPATH ACADEMY AUTOMATION DEVELOPER ASSOCIATE TRAINING - UIPATH (2026)",
         link: "https://credentials.uipath.com/3d880dbc-1ff0-4a4a-b44a-0422276e60db",
+        issuer: "UiPath",
+        year: "2026",
       },
       {
         folder: "DATASCIENCE",
         label: "DATA SCIENCE",
         title: "DATA SCIENCE PLACEMENT COURSE - INTERNSHALA (2024)",
         link: "https://trainings.internshala.com/view_certificate/i0zop8pgwt1/963b7w46fcw/",
+        issuer: "Internshala",
+        year: "2024",
       },
       {
         folder: "DATAANALYSIS",
         label: "DATA ANALYSIS",
         title: "DATA ANALYSIS USING PYTHON - IBM (2024)",
         link: "https://www.credly.com/badges/19d7b664-cb0f-4f76-8104-08f1fcecdbe3/linked_in_profile",
+        issuer: "IBM",
+        year: "2024",
       },
       {
         folder: "SAMSUNG_PYTHON",
         label: "SAMSUNG PYTHON",
         title: "PROGRAMMING WITH PYTHON - SAMSUNG INNOVATION CAMPUS (2024)",
         link: "https://drive.google.com/file/d/1SUW3vZjIBwTcW1E7TadaKcywA02cxb2k/view?usp=drivesdk",
+        issuer: "Samsung Innovation Campus",
+        year: "2024",
       },
       {
         folder: "SAMSUNG_AI",
         label: "SAMSUNG AI",
         title: "ARTIFICIAL INTELLIGENCE - SAMSUNG INNOVATION CAMPUS (2023)",
         link: "https://drive.google.com/file/d/13pdxk5Gu8C6gvSyoRV0V3PDh-_8QFpjC/view?usp=drivesdk",
+        issuer: "Samsung Innovation Campus",
+        year: "2023",
       },
     ];
 
@@ -934,6 +975,8 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
       certDetailPath.textContent = '$ CAT ./CERTIFICATES/' + data.folder + '/README.TXT';
       certDetailTitle.textContent = data.title;
       certDetailLink.href = data.link;
+      certDetailIssuer.textContent = data.issuer;
+      certDetailYear.textContent = data.year;
     }
 
     certFolders.forEach((folder) => {
