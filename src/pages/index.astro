@@ -16,6 +16,32 @@ const projects = [
     ],
   },
   {
+    id: "log-report",
+    name: "LOG REPORT ANALYSIS AGENT",
+    description: "Designed and deployed an autonomous UiPath Cloud agent that triggers CSV production logs to analyze, process, and extract insights from enterprise log reports. Integrated UiPath Agent Builder, defining custom agent bindings, resources, and execution triggers.",
+    tags: ["UIPATH STUDIO WEB", "PYTHON", "GENERATIVE AI", "AUTOMATION"],
+    github: "https://github.com/vaishnxvii/Log-Report-Analysis-Agent-Automation",
+    demo: "#",
+    metrics: [
+      { value: "UIPATH CLOUD", label: "PLATFORM" },
+      { value: "AGENT BUILDER", label: "FRAMEWORK" },
+      { value: "CSV LOGS", label: "DATA SOURCE" },
+    ],
+  },
+  {
+    id: "pcr-verification",
+    name: "PCR VERIFICATION AGENT",
+    description: "Engineered an automated warranty validation agent in UiPath Studio Web that parses and validates Product Registration Codes (PRCs) across web form and email submissions using structured pattern matching. Implemented dynamic error-handling workflows to instantly notify customers of mistyped or incomplete codes with targeted correction instructions, eliminating manual triage and streamlining warranty activations.",
+    tags: ["UIPATH STUDIO", "AUTOMATION", "PYTHON", "PATTERN MATCHING"],
+    github: "https://github.com/vaishnxvii/Product-Code-Registration-Verifying-Agent",
+    demo: "#",
+    metrics: [
+      { value: "UIPATH STUDIO WEB", label: "PLATFORM" },
+      { value: "PATTERN MATCHING", label: "CORE LOGIC" },
+      { value: "WARRANTY", label: "DOMAIN" },
+    ],
+  },
+  {
     id: "portfolio",
     name: "PORTFOLIO WEBSITE",
     description: "Neo-brutalist portfolio built with Astro and Tailwind CSS featuring a terminal-inspired UI, interactive project showcase with tab switching, folder-style certifications drill-down, and retro-futuristic design elements.",
@@ -106,7 +132,7 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
     </div>
 
     <!-- Center: Metadata -->
-    <div class="hidden md:flex items-center gap-3 text-[10px] font-bold tracking-widest text-[#1A1A1A]/60 uppercase">
+    <div class="flex items-center gap-3 text-[10px] font-bold tracking-widest text-[#1A1A1A]/60 uppercase">
       <span>LOC: LUCKNOW, IN</span>
       <span class="text-[#FF6B8B]">&middot;</span>
       <span>STATUS: ONLINE</span>
@@ -549,7 +575,7 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
           >
             VIEW CODE / GITHUB &rarr;
           </a>
-          {i <= 1 && (
+          {project.demo !== "#" && (
             <a
               href={project.demo}
               target="_blank"
@@ -835,7 +861,7 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
         <span class="text-[10px] font-bold tracking-widest text-[#1A1A1A]/40 shrink-0">01</span>
         <span class="bg-[#FF7597] px-2 py-0.5 text-xs font-bold border border-black shrink-0">B.TECH</span>
         <div class="flex-1">
-          <p class="text-sm font-black tracking-widest uppercase">B.Tech in Computer Scien Engineering</p>
+          <p class="text-sm font-black tracking-widest uppercase">B.Tech in Computer Science Engineering</p>
           <p class="text-[10px] font-bold tracking-wide text-[#1A1A1A]/60 mt-0.5">BABASAHEB BHIMRAO AMBEDKAR UNIVERSITY (B.B.A.U)| Dec 2021 – June 2025 </p>
 		  <p class="text-[10px] font-black tracking-wide text-[#1A1A1A]/80 mt-0.5">CGPA: 8.43/10</p>
 		</div>
