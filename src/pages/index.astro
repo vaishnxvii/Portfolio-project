@@ -137,7 +137,7 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
       <span class="text-[#FF6B8B]">&middot;</span>
       <span>STATUS: ONLINE</span>
       <span class="text-[#FF6B8B]">&middot;</span>
-      <span>{now}</span>
+      <span id="nav-clock">{now}</span>
     </div>
 
     <!-- Right: Social Icons + Divider -->
@@ -914,6 +914,21 @@ const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const navClock = document.getElementById('nav-clock');
+    if (navClock) {
+      const clockFormatter = new Intl.DateTimeFormat('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Kolkata',
+      });
+      const updateClock = () => {
+        navClock.textContent = clockFormatter.format(new Date());
+      };
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+
     const tabs = document.querySelectorAll('[data-project-tab]');
     const cards = document.querySelectorAll('[data-project-card]');
     const metrics = document.querySelectorAll('[data-project-metrics]');
